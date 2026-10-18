@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --navy: #10243f;
+  --canvas: #f4f6f8;
+  --line: #d5dce6;
+  --focus: #1d4e89;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--navy);
+  font-family:
+    "Segoe UI",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.react-flow__node:focus-visible {
+  outline: none;
+}
+
+.react-flow__controls {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.react-flow__controls-button {
+  background: #fff;
+  border-bottom-color: var(--line);
+  fill: var(--navy);
+  width: 28px;
+  height: 28px;
+}
+
+.react-flow__controls-button:hover {
+  background: #eef3f8;
+}
+
+.react-flow__attribution {
+  background: rgb(255 255 255 / 0.88) !important;
+  color: #526277 !important;
+}
+
+.react-flow__minimap {
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
